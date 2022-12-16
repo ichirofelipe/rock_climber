@@ -1,0 +1,151 @@
+{"frames": {
+
+"purple_breaking_51.png":
+{
+	"frame": {"x":0,"y":0,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_52.png":
+{
+	"frame": {"x":358,"y":0,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_53.png":
+{
+	"frame": {"x":716,"y":0,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_54.png":
+{
+	"frame": {"x":1074,"y":0,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_55.png":
+{
+	"frame": {"x":1432,"y":0,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_56.png":
+{
+	"frame": {"x":0,"y":370,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_57.png":
+{
+	"frame": {"x":358,"y":370,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_58.png":
+{
+	"frame": {"x":716,"y":370,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_59.png":
+{
+	"frame": {"x":1074,"y":370,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_60.png":
+{
+	"frame": {"x":1432,"y":370,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_61.png":
+{
+	"frame": {"x":0,"y":740,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_62.png":
+{
+	"frame": {"x":358,"y":740,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_63.png":
+{
+	"frame": {"x":716,"y":740,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_64.png":
+{
+	"frame": {"x":1074,"y":740,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_65.png":
+{
+	"frame": {"x":1432,"y":740,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_66.png":
+{
+	"frame": {"x":0,"y":1110,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+},
+"purple_breaking_67.png":
+{
+	"frame": {"x":358,"y":1110,"w":358,"h":370},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":358,"h":370},
+	"sourceSize": {"w":358,"h":370}
+}},
+"animations": {
+	"purple_breaking": ["purple_breaking_51.png","purple_breaking_52.png","purple_breaking_53.png","purple_breaking_54.png","purple_breaking_55.png","purple_breaking_56.png","purple_breaking_57.png","purple_breaking_58.png","purple_breaking_59.png","purple_breaking_60.png","purple_breaking_61.png","purple_breaking_62.png","purple_breaking_63.png","purple_breaking_64.png","purple_breaking_65.png","purple_breaking_66.png","purple_breaking_67.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "purple_breaking.png",
+	"format": "RGBA8888",
+	"size": {"w":1790,"h":1480},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ab706a20f53bd0e260e54437f12883a5:d709c6204f547ac4787ff681000dfae5:2e20bb6743503a717c71c2da5ab2345d$"
+}
+}

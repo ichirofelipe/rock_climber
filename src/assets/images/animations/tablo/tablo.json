@@ -1,0 +1,55 @@
+{
+	"frames": {
+		"tablo_01 - Copy.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 290,
+				"h": 110
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 290,
+				"h": 110
+			},
+			"sourceSize": {
+				"w": 290,
+				"h": 110
+			}
+		},
+		"tablo_02 - Copy.png": {
+			"frame": {
+				"x": 1,
+				"y": 113,
+				"w": 290,
+				"h": 110
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 290,
+				"h": 110
+			},
+			"sourceSize": {
+				"w": 290,
+				"h": 110
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "tablo.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 292,
+			"h": 224
+		},
+		"scale": "1"
+	}
+}

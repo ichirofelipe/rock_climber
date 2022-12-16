@@ -1,0 +1,117 @@
+async spin () {
+      
+      const shiftingDelay = 500;
+      const start = Date.now();
+      const reelsToSpin = [...this.reels];
+
+      reelsToSpin.forEach( async (reel, index) => {
+        const spinningReel = this.infiniteSpinning(reel, index);
+        console.log(spinningReel, 'wow');
+        // const shiftingWaitTime = (this.reels.length - reelsToSpin.length + 1) * shiftingDelay;
+        
+        // if (Date.now() >= start + shiftingWaitTime) {
+        //     console.log('doneReel');
+        //     const doneReel = reelsToSpin.shift();
+        //     this.bounceReel(doneReel);
+        // }
+
+        // if (!reelsToSpin.length) break;  
+      });
+
+      // return this.checkForWin(this.reels);
+    }
+
+    private bounceReel(reel:any) {
+      reel.reelSpinning = false;
+      reel.sprites.forEach((sprite: PIXI.AnimatedSprite) => {
+        sprite.gotoAndStop(0);
+      })
+      gsap.to(reel.container, {
+        y: 30,
+        duration: 0.2,
+        repeat: 1,
+        yoyo: true
+      })
+    }
+
+    private async infiniteSpinning(reel: Reel, index: number) {
+        while (true) {
+          await reel.spinOneTime(index);
+          this.blessRNG(reel);
+        }
+    }
+
+    private blessRNG(reel: Reel) {
+      reel.sprites[0].textures = reel.textures[Math.floor(Math.random() * reel.textures.length)];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    async spin () {
+      
+      const shiftingDelay = 500;
+      const start = Date.now();
+      const reelsToSpin = [...this.reels];
+
+      for await (let value of this.infiniteSpinning(reelsToSpin)) {
+        const shiftingWaitTime = (this.reels.length - reelsToSpin.length + 1) * shiftingDelay;
+        
+        if (Date.now() >= start + shiftingWaitTime) {
+            const doneReel = reelsToSpin.shift();
+            this.bounceReel(doneReel);
+        }
+
+        if (!reelsToSpin.length) break;  
+      }
+
+      return this.checkForWin(this.reels);
+    }
+
+    private bounceReel(reel:any) {
+      reel.reelSpinning = false;
+      reel.sprites.forEach((sprite: PIXI.AnimatedSprite) => {
+        sprite.gotoAndStop(0);
+      })
+      gsap.to(reel.container, {
+        y: 30,
+        duration: 0.2,
+        repeat: 1,
+        yoyo: true
+      })
+    }
+
+    private async* infiniteSpinning(reelsToSpin: Array<Reel>) {
+      while (true) {
+        const spinningPromises = await reelsToSpin.map( async (reel, index) => {
+          await reel.spinOneTime(index)
+          this.blessRNG(reel);
+        });
+        await Promise.race(spinningPromises);
+      }
+    }

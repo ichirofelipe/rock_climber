@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/app.css">
+  <title>My Slot Game</title>
+</head>
+<body>
+  <button onclick="generate()">Generate</button>
+</body>
+<script>
+const reelOdds = [
+  [1, 2, 3, 4, 5, 6, 7, 2, 1, 1, 7, 3, 1, 3, 2, 5, 4, 6],
+  [1, 2, 3, 4, 5, 6, 7, 4, 5, 1, 2, 3, 6, 3, 1, 3, 1, 5],
+  [1, 2, 3, 4, 5, 6, 7, 2, 3, 6, 3, 4, 3, 4, 5, 1, 2, 2],
+  [1, 2, 3, 4, 5, 6, 7, 1, 3, 5, 1, 5, 3, 2, 4, 2, 4, 2],
+  [1, 2, 3, 4, 5, 6, 7, 2, 3, 2, 2, 5, 1, 1, 4, 3, 6, 1]
+],
+pattern = [
+  [1,1,1,1,1],
+  [2,2,2,2,2],
+  [3,3,3,3,3],
+  [1,2,3,2,1],
+  [3,2,1,2,3],
+  [1,1,2,1,1],
+  [3,3,2,3,3],
+  [2,1,1,1,2],
+  [2,3,3,3,2],
+]
+Bet = 1,
+RTP = 0.9355,
+Rows = 3,
+Repeat = 10000,
+BaseMoney = 1000000;
+
+let winCountAll = 0;
+let lines = [0, 0, 0];
+let minLineCombination = 3;
+let highestBalance = 0;
+let totalSpin = 0;
+let winCount = 0;
+let beforeMoney = BaseMoney;
+let Money = BaseMoney;
+let totalCombination = 1;
+let basePay = [10, 5, 2.5845];
+// let basePay = [10, 5, 2.5];
+let AverageRTP = [];
+let reelStats = [
+    {
+      'value': 1,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        1,
+        1,
+        0.876
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 2,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        1,
+        1,
+        0.876
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 3,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        1,
+        0.8767143,
+        0.5
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 4,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        2.5,
+        2.5,
+        2.5
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 5,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        2.5,
+        2.5,
+        2.5
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 6,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        5,
+        5,
+        5
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    },
+    {
+      'value': 7,
+      'probability': [
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        },
+        {
+          'percent': 1,
+          'colCount': 0,
+          'extraPatt': 0,
+        }
+      ],
+      'multiplier': [
+        10,
+        1,
+        1
+      ],
+      'pay': [
+        0,
+        0,
+        0
+      ],
+      'blockProb': 0,
+      'reelCount': [],
+    }
+  ]
+
+const beautifyResult = (result) => {
+  let beautifiedRes = [];
+  
+  result.forEach((reels, spinIndex) => {
+    if(!beautifiedRes[spinIndex])
+        beautifiedRes[spinIndex] = []
+
+    reels.forEach(reel => {
+      
+      reel.forEach((symbol, index) => {
+        if(!beautifiedRes[spinIndex][index])
+          beautifiedRes[spinIndex][index] = []
+
+        beautifiedRes[spinIndex][index].push(symbol);
+      })
+
+    })
+
+  })
+
+  return beautifiedRes;
+}
+
+const checkWin = (reels) => {
+  let winningPattern = [];
+  pattern.forEach((pat, patIndex) => {
+    let counter = 0;
+
+    while(counter != minLineCombination){
+      const combination = new Set();
+
+      reels.forEach((reel, index) => {
+        if(index < (pat.length - counter)){
+          combination.add(reel[pat[index] - 1])
+        }
+      });
+      
+      if (combination.size === 1)
+        if(!([...combination.values()][0] == 7 && counter != 0))
+          winningPattern.push({'index': patIndex,'combination': [...combination.values()][0], 'colCount': (pat.length - counter)});
+
+      counter++;
+    }
+
+  });
+  
+  return winningPattern;
+}
+
+const winFunction = (winnings) => {
+  winnings.forEach(win => {
+    let stats = reelStats.find(stat => stat.value === win.combination);
+    let index = pattern[win.index].length - win.colCount;
+    Money += stats.pay[index];
+    lines[index]++;
+    winCount++;
+    winCountAll++;
+    // console.log(stats, `WIN ${win.colCount} LINES!`);
+
+    if(highestBalance < Money)
+      highestBalance = Money;
+  })
+}
+
+const init = () => {
+  reelOdds.forEach((reel, reelIndex) => {
+    totalCombination *= reel.length;
+  })
+  
+  basePay = basePay.map(val => val * Bet);
+  console.log(basePay);
+  
+  reelStats.forEach((stats, statsIndex) => {
+    
+    reelOdds.forEach((reel, reelIndex) => {
+    
+      reel.forEach(symbol => {
+
+        if(stats.value == symbol){
+          if(!stats.reelCount[reelIndex])
+            stats.reelCount[reelIndex] = 0;
+          stats.reelCount[reelIndex]++;
+        }
+      })
+    })
+    
+    stats.probability.map((prob, probIndex) => {
+      stats.reelCount.forEach((count, index) => {
+        if(!(index >= stats.reelCount.length - probIndex)){
+          prob.percent *= count;
+          prob.colCount++;
+        }
+      })
+      if(probIndex > 0)
+        prob.extraPatt = Math.pow(7, probIndex);
+    })
+    // console.log('probability', stats.probability);
+    
+    stats.probability.map((prob, probIndex) => {
+      if(prob.extraPatt > 0){
+        prob.percent = (prob.percent / Math.pow(Math.pow(totalCombination, 1/5), prob.colCount)) * prob.extraPatt;
+      }
+      else{
+        prob.percent = prob.percent / totalCombination;
+      }
+    })
+
+    stats.pay = stats.pay.map((pay, payIndex) => basePay[payIndex] * stats.multiplier[payIndex] * RTP)
+    
+    // stats.probability5 = stats.probability5 / totalCombination;
+    // stats.pay5       =  stats.probability5 * stats.multiplier5 * RTP;
+    // stats.probability4 = stats.probability4 / (Math.pow(Math.pow(totalCombination, 1/5), 4) * 7);
+    // stats.pay4       =  stats.probability4 * stats.multiplier4 * RTP;
+    // stats.probability3 = stats.probability3 / (Math.pow(Math.pow(totalCombination, 1/5), 3) * 49);
+    // stats.pay3       =  stats.probability3 * stats.multiplier3 * RTP;
+
+    // stats.blockProb = Math.pow((stats.probability[0] * totalCombination), 1/5) / (Math.pow(totalCombination, 1/5))
+  }) 
+
+  console.log(reelStats);
+}
+
+const generate = () => {
+  let reelResult = [];
+  let rep;
+  winCount = 0;
+  
+  for(rep = 0; rep < Repeat; rep++){
+    if(Bet <= Money){
+      Money-= Bet;
+      reelResult[rep] = [];
+      totalSpin++;
+
+      reelOdds.forEach((reel, reelIndex) => {
+        if(!reelResult[rep][reelIndex])
+          reelResult[rep][reelIndex] = []
+
+        for(let row = 0; row < 3; row++){
+          if(!reelResult[rep][reelIndex][row])
+            reelResult[rep][reelIndex][row] = []
+          
+          // let symbol;
+          // while(symbol === undefined){
+          //   symbol = reelStats.reverse().find(stat => (stat.reelCount[reelIndex]/reel.length)*100 >= Prob()*100);
+          // }
+          // reelResult[rep][reelIndex][row] = symbol.value;
+          reelResult[rep][reelIndex][row] = reel[Math.floor(Math.random() * reel.length)];
+        }
+
+      })
+
+
+      let winnings = checkWin(reelResult[rep]);
+    
+      if(winnings.length > 0){
+        // console.log(rep);
+        winFunction(winnings)
+      }
+    }
+    else {
+      console.log('Insufficient Balance!:', Money);
+    }
+  }
+
+  let result = beautifyResult(reelResult);
+  // console.log(result);
+  console.log('repeat spin:', rep);
+  console.log('current balance:', Money);
+  console.log('Total Repeat Win Count:', winCount);
+  console.log('Overall Win Count:', winCountAll);
+  console.log('Total Spins:', totalSpin);
+  console.log('Highest Balance:', highestBalance);
+  console.log('5 lines won:', lines[0]);
+  console.log('4 lines won:', lines[1]);
+  console.log('3 lines won:', lines[2]);
+  console.log('Win Percentage', `${(winCountAll/totalSpin)*100}%`);
+  console.log('Total Payout Percentage', `${(Money/BaseMoney)*100}%`);
+  console.log('Total Repeat Payout Percentage', `${(Money/beforeMoney)*100}%`);
+  AverageRTP.push((Money/beforeMoney)*100);
+  beforeMoney = Money;
+
+  let avgRTP = AverageRTP.reduce((a, b) => a + b, 0)
+  // console.log('Average RTP:', `${avgRTP/AverageRTP.length}%`);
+}
+
+
+const Prob = () => {
+  let rand = Math.random();
+  return rand;
+}
+
+init();
+
+</script>
+<script src="/src/core/functions/index.js"></script>
+</html>

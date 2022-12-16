@@ -1,0 +1,695 @@
+{
+	"frames": {
+		"pers_idle_00.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_01.png": {
+			"frame": {
+				"x": 252,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_02.png": {
+			"frame": {
+				"x": 503,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_03.png": {
+			"frame": {
+				"x": 754,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_04.png": {
+			"frame": {
+				"x": 1005,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_05.png": {
+			"frame": {
+				"x": 1256,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_06.png": {
+			"frame": {
+				"x": 1507,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_07.png": {
+			"frame": {
+				"x": 1758,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_08.png": {
+			"frame": {
+				"x": 1,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_09.png": {
+			"frame": {
+				"x": 252,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_10.png": {
+			"frame": {
+				"x": 503,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_11.png": {
+			"frame": {
+				"x": 754,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_12.png": {
+			"frame": {
+				"x": 1005,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_13.png": {
+			"frame": {
+				"x": 1256,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_14.png": {
+			"frame": {
+				"x": 1507,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_15.png": {
+			"frame": {
+				"x": 1758,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_16.png": {
+			"frame": {
+				"x": 1,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_17.png": {
+			"frame": {
+				"x": 252,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_18.png": {
+			"frame": {
+				"x": 503,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_19.png": {
+			"frame": {
+				"x": 754,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_20.png": {
+			"frame": {
+				"x": 1005,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_21.png": {
+			"frame": {
+				"x": 1256,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_22.png": {
+			"frame": {
+				"x": 1507,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_23.png": {
+			"frame": {
+				"x": 1758,
+				"y": 959,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_24.png": {
+			"frame": {
+				"x": 1,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_25.png": {
+			"frame": {
+				"x": 252,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_26.png": {
+			"frame": {
+				"x": 503,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_27.png": {
+			"frame": {
+				"x": 754,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_28.png": {
+			"frame": {
+				"x": 1005,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_29.png": {
+			"frame": {
+				"x": 1256,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_30.png": {
+			"frame": {
+				"x": 1507,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_31.png": {
+			"frame": {
+				"x": 1758,
+				"y": 1438,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_32.png": {
+			"frame": {
+				"x": 2009,
+				"y": 1,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		},
+		"pers_idle_33.png": {
+			"frame": {
+				"x": 2009,
+				"y": 480,
+				"w": 249,
+				"h": 477
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 249,
+				"h": 477
+			},
+			"sourceSize": {
+				"w": 249,
+				"h": 477
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "pers_idle.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 2259,
+			"h": 1916
+		},
+		"scale": "1"
+	}
+}
